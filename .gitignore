@@ -7,6 +7,9 @@
 *.tar.gz
 *.rar
 *.README.txt
+*.iml
 
 .idea/*
 .target/*
+# Project exclude paths
+/target/
