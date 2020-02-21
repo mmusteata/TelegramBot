@@ -9,7 +9,7 @@ public class Bot extends TelegramLongPollingBot {
 
     /**
      * Method for receiving messages.
-     *
+     * user receive message that his input is in process
      * @param update contain message from user.
      */
 
@@ -24,7 +24,12 @@ public class Bot extends TelegramLongPollingBot {
 
             SendMessage message = new SendMessage() // Create a message object object
                     .setChatId(chat_id)
-                    .setText(message_text);
+                    .setText("Bot process your message: " + message_text);
+            try {
+                execute(message); // Sending our message object to user
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
         }
     }
 
