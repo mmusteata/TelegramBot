@@ -3,15 +3,13 @@ import org.telegram.telegrambots.api.objects.Update;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.exceptions.TelegramApiException;
 
-import java.util.logging.*;
-
-import static org.telegram.telegrambots.logging.BotLogger.log;
 
 public class Bot extends TelegramLongPollingBot {
 
 
     /**
      * Method for receiving messages.
+     *
      * @param update contain message from user.
      */
 
@@ -37,6 +35,7 @@ public class Bot extends TelegramLongPollingBot {
 
     /**
      * Method return bot username, which was set at registration.
+     *
      * @return bot username
      */
 
@@ -47,6 +46,7 @@ public class Bot extends TelegramLongPollingBot {
 
     /**
      * Method return bot's token for communication with Telegram server
+     *
      * @return token for bot
      */
 
